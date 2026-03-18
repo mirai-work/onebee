@@ -576,9 +576,10 @@ class TwinBeeFinal:
             pyxel.text(55, 30, "O N E B E E", pyxel.frame_count % 15 + 1)
             pyxel.text(45, 50, "ULTIMATE EDITION", 7)
             if self.frame % 30 < 15: pyxel.text(42, 100, "PUSH START or Z KEY", 7)
+            # 修正：著作権表記を「START!」が表示されていない時だけ表示するようにしました
+            pyxel.text(37, 112, "(C)MIRAIWORK/M.T 2026", 7)
+
         self.draw_twinbee(76, self.p["y"], True)
-        # --- タイトル画面下部の著作権表記を追加 ---
-        pyxel.text(37, 112, "(C)MIRAIWORK/M.T 2026", 7)
 
     def draw_ending(self):
         pyxel.cls(0); [pyxel.pset(random.randint(0, WIDTH), random.randint(0, HEIGHT), random.choice([6, 7, 12])) for _ in range(20)]
